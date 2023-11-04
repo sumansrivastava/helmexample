@@ -1,0 +1,23 @@
+# values.yaml
+
+replicaCount: 2
+
+image:
+  repository: suamnjsr/my-web-app
+  tag: latest
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "250m"
+    memory: "256Mi"
+
+service:
+  type: LoadBalancer
+  port: 80
+
+ingress:
+  enabled: false
+
